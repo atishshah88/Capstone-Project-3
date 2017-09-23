@@ -1,0 +1,73 @@
+---
+title: "Capstone Project Proposal"
+author: "Atish Shah"
+date: "September 23, 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+## Project Summary
+This aim of this project is to develop an algorithm that will use the survey findings of US Energy Information Administration (EIA) to predict energy usage of buildings during a design phase. The energy predictions will be filtered per the desired building parameters surveyed by the EIA.
+
+
+## Problem Introduction
+When a building owner or the owner hired building design consultants are asked to predict the building performance in terms of its energy use, there are two common ways of predicting this:
+
+1. Use rule of thumb from previous project experiences
+2. Build computer generated energy model
+
+While the rule of thumbs can serve as a quick back of the envelope rough calculation they often suffer from the following shortcomings:
+
+1. No two buildings are identical. There are numerous building features that contribute towards the energy usage of the building. This can make application of rule of thumbs rather difficult and inaccurate
+2. Rule of thumbs can only be applied between buildings within the same climate zone
+3. Effective application of rule of thumb requires extensive experience on part of the user
+
+On the other hand generating a computer energy model is expensive, time intensive and often impractical for small building design projects. And, the actual building can act very different from a computer generated model.
+
+This project aims to alleviate the above issues by providing a quick, intuitive and visually pleasing results that can be used to predict the building energy usage based on the actual energy usage of buildings with similar features surveyed by the EIA.
+
+
+## Data Source
+This project will use the dataset provided by the EIA for Commercial Buildings Energy Consumption found [here](https://www.eia.gov/consumption/commercial/data/2012/). The datasets included within the Building Characteristics and Consumption & Expenditures tabs are to be used for analysis. Some of the attributes/parameters (total of 45) of the energy usage datasets are:
+
+1. Census region
+  + Northeast
+  + Midwest
+  + South
+  + West
+2. Climate Region
+  + Very Cold/Cold
+  + Mixed-humid
+  + Mixed-dry/Hot-dry
+  + Hot-humid
+  + Marine
+3. Building size in ft2
+  + 1,001 to 5,000 
+  + 5,001 to 10,000 
+  + 10,001 to 25,000
+  + 25,001 to 50,000
+  + 50,001 to 100,000 
+  + Over 100,000
+4. Year Constructed
+  + Before 1920
+  + 1920 to 1945
+  + 1946 to 1959
+  + 1960 to 1969
+  + After 1969
+5. So on and so forth...
+
+## Analysis Methodology
+The biggest challenge will be selecting a different combination of sub-parameters will yield a different result. For example: energy consumption of a building constructed in 1930 that is 30,000 ft2 will have energy consumption totally different than building constructed in 1980 that is 50,000 ft2 and located in marine climate region. Currently energy consumption data is only given by the (4) parameters listed above ([census](https://www.eia.gov/consumption/commercial/data/2012/c&e/pdf/c15.pdf), [climate region](https://www.eia.gov/consumption/commercial/data/2012/c&e/pdf/c20.pdf), [building size](https://www.eia.gov/consumption/commercial/data/2012/c&e/pdf/c21.pdf) and [year constructed](https://www.eia.gov/consumption/commercial/data/2012/c&e/cfm/c22.php)) for all other parameters.
+
+A machine learning algorithm will have to be used to predict energy consumption based on the datasets that are being provided by EIA.
+
+
+## Final Deliverable
+The final deliverable will be to an algorithm that produces a mark down file with the desired building characteristics/parameters and the corresponding energy consumption range and presentable graphs. This mark down file can be used as or as a part of reports for building designer/consultants when conveying the results to the building owner.
+
+The deliverable will also include a writeup and a presentation on the entire analysis process including the concepts used in building the algorithm. The final deliverable will be uploaded on [github](https://github.com/atishshah88/Capstone-Project-3).
+
