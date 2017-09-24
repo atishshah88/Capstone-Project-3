@@ -1,0 +1,62 @@
+---
+title: "3 potential Capstone project ideas"
+author: "AS"
+date: "September 14, 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Assignment: We'd like you to come up with three broad ideas for your Capstone Project. At this point, there's no need to talk about specific methods and techniques. We just want to get you thinking in that direction and take a baby step. Your mentor is here to guide you through the process of actually identifying an idea to work on.
+
+### Project 1: Commercial Buildings Energy Consumption
+1. What is the problem you want to solve?
+Often building designers and the building owners stumble upon the question of energy use intensity and ultimately the energy usage for their newly proposed building design. At such times they rely on rule of thumbs or on building energy model to predict that data. Rule of thumbs can sometime be unreliable and energy models can be expensive to build and can also be a far cry from what the real building may be. This project can help solve that problem by providing the owner and the building designer a more educated build energy usage estimate based on their specific parameters like: climate zone, number of stories, end use, etc.
+
+2. Who is your client and why do they care about this problem? In other words, what will your client DO or DECIDE based on your analysis that they wouldn't have otherwise?
+My clients are: building owners, architects and building design engineeers. Generally my clients would base their preliminary building energy use on rule of thumbs. Many times these rule of thumbs do not take into account various parameters that affect building energy usage. Also, junior engineers/building designers do not have the necessary experience to apply the right rule of thumb. The solution to this problem will help these people to predict building energy usage within the right range
+
+3. What data are you going to use for this? How will you acquire this data?
+Source: Energy Information Administration. Multiple spreadsheets will have to be combined to come up with one thorough dataset
+
+4. In brief, outline your approach to solving this problem (knowing that this might change later)
+The first step will be to import the dataset into R studio. Impliment various data wrangling techniques to add additional columns, combine, separate columns and bring the dataset in a format that can easily be worked on. There on, statistical analysis will have to be implemented to come up with results for a specific type of the building that a user is looking for energy usage, as filters are applied the answer can be narrowed down. Visualization techniques can be used to display graphs to offer insights and help visualize effect of a filter on the building energy usage. Supporting data set: https://data.world/doe/buildings-energy-data-book 
+
+5. What are your deliverables? Typically, this would include code, along with a paper and/or a slide deck.
+Code and a slideshow
+
+
+### Project 2: Determine Best City in the United States for Real Estate Investment
+1. What is the problem you want to solve?
+Real estate is one of the best investment vehicles in the United States if done correctly. With advent of the internet it has become much easier for anyone to buy an investment real estate far from their howm town. I want to make this easier for potential investors to find the right city and/or zip code in the United States for their investment goals
+
+2. Who is your client and why do they care about this problem? In other words, what will your client DO or DECIDE based on your analysis that they wouldn't have otherwise?
+My client is any aspiring real estate investor or an investor looking for more bang for their buck. In absence of this tool, a person looking for the best city/town to invest in real estate will have to go to different data sources and look for different metrics like employment growth, median house value, median rent, crime for a bunch of cities to try to determine the ideal city for real estate investment based on ones criterias.
+
+3. What data are you going to use for this? How will you acquire this data?
+Zillow publishes data for different real estate related metrics that can all be useful to determine ideal real estate cities: https://www.zillow.com/research/data/
+
+4. In brief, outline your approach to solving this problem (knowing that this might change later)
+All the factors that contribute towards making a city a good real estate investment destination need to be identified. Each row will represent a city or a zipcode. Each column will represent a factor/variable liked median house price, median rent, job growth, etc. All this data will need to be consolidated using data wrangling and data transformation techniques. Look for relation between factors and how they affect real estate parameters like appreciation, rents, house prices, etc.Visualization techniques can be used to display graphs to offer additional insights
+
+5. What are your deliverables? Typically, this would include code, along with a paper and/or a slide deck.
+Code and a slideshow
+
+
+### Project 3: Open Food Facts
+1. What is the problem you want to solve?
+I want to analyze food habits around the world and determine countries with highest per capita sugar consumption or highest alcohol consumption.
+
+2. Who is your client and why do they care about this problem? In other words, what will your client DO or DECIDE based on your analysis that they wouldn't have otherwise?
+My clients can be number of people, dieticians, local governments, policy makers trying to recognize food products that are popular in a country but are also very harmful
+
+3. What data are you going to use for this? How will you acquire this data?
+https://world.openfoodfacts.org/data
+
+4. In brief, outline your approach to solving this problem (knowing that this might change later)
+Using Visualization, consumption of different ingredients can be plotted for various countries. Many of these ingredients are known to cause various diseases and this corelation can also be checked for
+
+5. What are your deliverables? Typically, this would include code, along with a paper and/or a slide deck.
+Code and a slideshow
